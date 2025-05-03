@@ -1,0 +1,164 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #edf8f0;
+  color: #333;
+}
+
+header,
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #ccf3d7;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+header p {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  color: #24633c;
+  font-weight: 500;
+}
+
+.dark-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+h1 {
+  margin: 0.5rem 0;
+  font-size: 2.5rem;
+}
+
+.container {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.btn {
+  background-color: #24633c;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+.input-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+}
+
+.input-table th,
+.input-table td {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+input {
+  width: 90%;
+  padding: 5px;
+}
+
+#login-page {
+  padding: 2rem;
+  max-width: 700px;
+  margin: 150px auto;
+}
+
+#login-page input {
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.quote {
+  text-align: center;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #555;
+  margin: 2rem 0 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #f0fdf4;
+  border-left: 4px solid #24633c;
+  border-right: 4px solid #24633c;
+  border-radius: 8px;
+}
+
+.logo {
+  display: block;
+  margin: 20px auto;
+  width: 100px;
+}
+
+#semester-tables {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+#semester-tables > div {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.selection-card {
+  background-color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
+  margin: auto;
+}
+
+.selection-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.selection-card label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #24633c;
+}
+
+.selection-controls select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  flex-grow: 1;
+  min-width: 150px;
+}
+
+@media (max-width: 600px) {
+  .selection-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .input-table th,
+  .input-table td {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CGPA Master Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyA-ZfLVt-mMYlewskoMF0xVdp7ODXykBMs",
+        authDomain: "cgpa-master-calculator.firebaseapp.com",
+        projectId: "cgpa-master-calculator",
+        storageBucket: "cgpa-master-calculator.firebasestorage.app",
+        messagingSenderId: "127347563364",
+        appId: "1:127347563364:web:a5b7f218cffaf0401cf871",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>CGPA Master Tracker</h1>
+      <p>Track, Predict, Improve – Smarter Academic Progress</p>
+    </header>
+
+    <section class="container selection-section">
+      <h2 id="welcome-message"></h2>
+      <div class="selection-card">
+        <div class="selection-controls">
+          <label for="semesterSelect">🎓 Choose Semester:</label>
+          <select id="semesterSelect">
+            <option value="Semester 1">Semester 1</option>
+            <option value="Semester 2">Semester 2</option>
+            <option value="Semester 3">Semester 3</option>
+            <option value="Semester 4">Semester 4</option>
+            <option value="Semester 5">Semester 5</option>
+            <option value="Semester 6">Semester 6</option>
+            <option value="Semester 7">Semester 7</option>
+            <option value="Semester 8">Semester 8</option>
+          </select>
+          <button class="btn" onclick="addSemester()">Add Semester</button>
+        </div>
+      </div>
+    </section>
+
+    <div id="semester-tables" class="container"></div>
+
+    <div class="container">
+      <button class="btn" onclick="calculateCGPA()">Calculate CGPA</button>
+
+      <h3 id="cgpa-result">CGPA result:</h3>
+      <canvas id="gpaChart" height="200" style="margin-top: 30px"></canvas>
+
+      <div class="quote">“You’re just one A away from greatness!”</div>
+    </div>
+
+    <footer>
+      <button class="btn">Save Result</button>
+      <button class="btn">Start Over</button>
+      <p>Made with 💻 by Hibatullah, Elizabeth & Temiloluwa</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
