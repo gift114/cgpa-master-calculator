@@ -1,5 +1,6 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "AdobeClean", Arial, sans-serif;
   margin: 0;
   padding: 0;
   background: #edf8f0;
@@ -21,20 +22,13 @@ header p {
   font-weight: 500;
 }
 
-.dark-toggle {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  cursor: pointer;
-}
-
 h1 {
   margin: 0.5rem 0;
   font-size: 2.5rem;
 }
 
 .container {
-  padding: 2rem;
+  padding: 1rem;
   max-width: 900px;
   margin: auto;
 }
@@ -47,20 +41,62 @@ h1 {
   font-size: 1rem;
   border-radius: 8px;
   cursor: pointer;
+  margin-top: 1rem;
+}
+
+.sign-btn {
+  width: 95%;
+  background-color: #24633c;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
   margin-top: 2rem;
+}
+
+a {
+  text-decoration: none;
 }
 
 .input-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   margin-top: 2rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  font-size: 0.95rem;
+  background-color: #ffffff;
 }
 
-.input-table th,
-.input-table td {
-  padding: 0.75rem;
-  border: 1px solid #ccc;
+.input-table th {
+  background-color: #24633c;
+  color: white;
+  font-weight: 600;
+  padding: 1rem;
   text-align: center;
+}
+
+.input-table td {
+  padding: 0.85rem;
+  text-align: center;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.input-table input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 90%;
+  font-size: 0.95rem;
+}
+
+.input-table input:focus {
+  border-color: #24633c;
+  outline: none;
 }
 
 input {
@@ -92,17 +128,11 @@ input {
   border-radius: 8px;
 }
 
-.logo {
-  display: block;
-  margin: 20px auto;
-  width: 100px;
-}
-
 #semester-tables {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 2rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 #semester-tables > div {
@@ -145,20 +175,96 @@ input {
   min-width: 150px;
 }
 
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.transcript-heading {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  text-transform: uppercase;
+}
+
+exportContent {
+  margin-top: 0 !important;
+}
+
 @media (max-width: 600px) {
   .selection-controls {
     flex-direction: column;
     align-items: stretch;
   }
 
+  #semester-tables {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .selection-card {
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    max-width: 400px;
+  }
+
   .btn {
     width: 100%;
     text-align: center;
+    margin-top: 1.5rem;
+  }
+
+  #semester-tables {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+
+  input {
+    width: 80%;
+    padding: 3px;
+  }
+
+  .user-fields {
+    text-align: center;
+  }
+
+  .input-table {
+    font-size: 0.75rem;
+    width: 100%;
+    overflow-x: auto;
   }
 
   .input-table th,
   .input-table td {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     padding: 0.5rem;
+  }
+
+  .delete-btn {
+    padding: 0.3rem 0.6rem;
+    font-weight: 0.5rem;
+  }
+
+  #login-page {
+    max-width: 500px;
+    margin: 120px auto;
+  }
+
+  #login-page input {
+    margin: 10px 0;
+    padding: 10px;
+    width: 90%;
   }
 }

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CGPA Master Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>CGPA Master Tracker</h1>
+      <p>Track, Predict, Improve – Smarter Academic Progress</p>
+    </header>
+
+    <section class="container selection-section">
+      <h2 id="welcome-message"></h2>
+      <div class="selection-card">
+        <div class="selection-controls">
+          <label for="semesterSelect">🎓 Choose Semester:</label>
+          <select id="semesterSelect">
+            <option value="Semester 1">Semester 1</option>
+            <option value="Semester 2">Semester 2</option>
+            <option value="Semester 3">Semester 3</option>
+            <option value="Semester 4">Semester 4</option>
+            <option value="Semester 5">Semester 5</option>
+            <option value="Semester 6">Semester 6</option>
+            <option value="Semester 7">Semester 7</option>
+            <option value="Semester 8">Semester 8</option>
+          </select>
+          <button class="btn" id="add-semester">Add Semester</button>
+        </div>
+      </div>
+    </section>
+
+    <div id="semester-tables" class="container"></div>
+
+    <div class="container">
+      <button class="btn" id="calculate-gpa">Calculate CGPA</button>
+
+      <h3 id="cgpa-result">CGPA result:</h3>
+      <canvas id="gpaChart" height="200" style="margin-top: 30px"></canvas>
+
+      <div class="quote">“You’re just one A away from greatness!”</div>
+    </div>
+
+    <footer>
+      <button class="btn" id="save-transcript-btn">Save Result</button>
+      <button class="btn" id="logout-button">Logout</button>
+
+      <p>Made with 💻 by Hibatullah, Elizabeth & Temiloluwa</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

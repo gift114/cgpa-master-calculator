@@ -1,0 +1,220 @@
+body {
+  color: #333;
+  background: #edf8f0;
+  margin: 0;
+  padding: 0;
+  font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header, footer {
+  text-align: center;
+  background-color: #ccf3d7;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px #0000001a;
+}
+
+header p {
+  color: #24633c;
+  margin-top: .5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+h1 {
+  margin: .5rem 0;
+  font-size: 2.5rem;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.btn {
+  color: #fff;
+  cursor: pointer;
+  background-color: #24633c;
+  border: none;
+  border-radius: 8px;
+  margin-top: 2rem;
+  padding: .75rem 1.5rem;
+  font-size: 1rem;
+}
+
+.input-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.input-table th, .input-table td {
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: .75rem;
+}
+
+input {
+  width: 90%;
+  padding: 5px;
+}
+
+#login-page {
+  max-width: 700px;
+  margin: 150px auto;
+  padding: 2rem;
+}
+
+#login-page input {
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.quote {
+  text-align: center;
+  color: #555;
+  background-color: #f0fdf4;
+  border-left: 4px solid #24633c;
+  border-right: 4px solid #24633c;
+  border-radius: 8px;
+  margin: 2rem 0 1rem;
+  padding: .5rem 1rem;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+#semester-tables {
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  display: grid;
+}
+
+#semester-tables > div {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px #0000000d;
+}
+
+.selection-card {
+  background-color: #fff;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: auto;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 4px 10px #00000014;
+}
+
+.selection-controls {
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  display: flex;
+}
+
+.selection-card label {
+  color: #24633c;
+  margin-bottom: .5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  display: block;
+}
+
+.selection-controls select {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  flex-grow: 1;
+  min-width: 150px;
+  padding: .5rem;
+  font-size: 1rem;
+}
+
+.input-table {
+  border-collapse: collapse;
+  word-wrap: break-word;
+  table-layout: fixed;
+  width: 100%;
+  min-width: 100%;
+}
+
+.delete-btn {
+  color: #fff;
+  cursor: pointer;
+  background-color: #e74c3c;
+  border: none;
+  border-radius: 6px;
+  padding: .4rem .8rem;
+  font-weight: bold;
+  transition: background-color .3s;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+@media (width <= 600px) {
+  .selection-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #semester-tables {
+    flex-direction: column;
+    align-items: stretch;
+    display: flex;
+  }
+
+  .selection-card {
+    border-radius: 12px;
+    max-width: 400px;
+    padding: 1rem 1.5rem;
+  }
+
+  .btn {
+    text-align: center;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  #semester-tables {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+
+  input {
+    width: 80%;
+    padding: 3px;
+  }
+
+  .user-fields {
+    text-align: center;
+  }
+
+  .input-table {
+    width: 100%;
+    font-size: .75rem;
+    overflow-x: auto;
+  }
+
+  .input-table th, .input-table td {
+    padding: .5rem;
+    font-size: .7rem;
+  }
+
+  .delete-btn {
+    font-weight: .5rem;
+    padding: .3rem .6rem;
+  }
+
+  #login-page {
+    max-width: 500px;
+    margin: 120px auto;
+  }
+
+  #login-page input {
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px;
+  }
+}
+/*# sourceMappingURL=CGPA-Master-Tracker.3a01df49.css.map */

@@ -4,53 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CGPA CALCULATOR LANDING PAGE</title>
-    <!-- <script type="module">
-      // Import the functions you need from the SDKs you need
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-      // TODO: Add SDKs for Firebase products that you want to use
-      // https://firebase.google.com/docs/web/setup#available-libraries
-
-      // Your web app's Firebase configuration
-      const firebaseConfig = {
-        apiKey: "AIzaSyA-ZfLVt-mMYlewskoMF0xVdp7ODXykBMs",
-        authDomain: "cgpa-master-calculator.firebaseapp.com",
-        projectId: "cgpa-master-calculator",
-        storageBucket: "cgpa-master-calculator.firebasestorage.app",
-        messagingSenderId: "127347563364",
-        appId: "1:127347563364:web:a5b7f218cffaf0401cf871",
-      };
-
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-    </script> -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="login-page">
       <h1 style="text-align: center">🎓 Create Your Account</h1>
-  
+
       <input type="text" id="signup-name" placeholder="Full Name" required />
-      <input type="text" id="signup-matric" placeholder="Matric Number" required />
-      <input type="email" id="signup-email" placeholder="Email Address" required />
-      <input type="password" id="signup-password" placeholder="Password" required />
-  
-      <button class="btn" onclick="signUpUser()">Sign Up</button>
-  
-      <p style="text-align:center; margin-top: 10px;">
-        Already have an account? <a href="landing.html">Login here</a>
+      <input
+        type="text"
+        id="signup-matric"
+        placeholder="Matric Number"
+        required
+      />
+      <input
+        type="email"
+        id="signup-email"
+        placeholder="Email Address"
+        required
+      />
+      <input
+        type="password"
+        id="signup-password"
+        placeholder="Password"
+        required
+      />
+      <div
+        id="status-message"
+        style="
+          display: none;
+          padding: 10px;
+          border-radius: 5px;
+          margin-bottom: 10px;
+        "
+      ></div>
+
+      <button class="sign-btn" id="signup-button">Sign Up</button>
+
+      <p style="text-align: center; margin-top: 10px">
+        Already have an account? <a href="index.html">Login here</a>
       </p>
-  
-      <blockquote>“Secure your success. Sign up smart.”</blockquote>
 
+      <div class="quote">“Secure your success. Sign up smart.”</div>
     </div>
 
-      <footer>Made with ❤️ by Hibatullah, Elizabeth & Temiloluwa</footer>
+    <footer>Made with ❤️ by Hibatullah, Elizabeth & Temiloluwa</footer>
 
-      <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
-
-      <script src="app.js"></script>
-    </div>
+    <script type="module" src="app.js"></script>
   </body>
 </html>
