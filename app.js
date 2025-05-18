@@ -1,24 +1,13 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+import { initializeApp } from "firebase/app";
 import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   onAuthStateChanged,
   signOut,
-} from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
-import {
-  getDatabase,
-  ref,
-  set,
-  get,
-  child,
-} from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
-import {
-  getFirestore,
-  doc,
-  setDoc,
-  getDoc,
-} from "https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js";
+} from "firebase/auth";
+import { getDatabase, ref, set, get, child } from "firebase/database";
+import { getFirestore, doc, setDoc, getDoc } from "firebase/firestore";
 
 import { jsPDF } from "https://cdn.skypack.dev/jspdf";
 
