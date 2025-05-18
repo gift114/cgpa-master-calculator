@@ -9,8 +9,6 @@ import {
 import { getDatabase, ref, set, get, child } from "firebase/database";
 import { getFirestore, doc, setDoc, getDoc } from "firebase/firestore";
 
-import { jsPDF } from "https://cdn.skypack.dev/jspdf";
-
 const firebaseConfig = {
   apiKey: "AIzaSyA-ZfLVt-mMYlewskoMF0xVdp7ODXykBMs",
   authDomain: "cgpa-master-calculator.firebaseapp.com",
