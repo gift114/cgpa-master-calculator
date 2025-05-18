@@ -16,9 +16,10 @@
   "license": "ISC",
   "dependencies": {
     "firebase": "^11.7.3",
-    "tslib": "2.6.2"
+    "tslib": "^2.6.2"
   },
   "devDependencies": {
+    "buffer": "^6.0.3",
     "parcel": "^2.15.1"
   }
 }

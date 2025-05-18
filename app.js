@@ -1,3 +1,4 @@
+import "tslib/tslib.es6.mjs";
 import { initializeApp } from "firebase/app";
 import {
   getAuth,
