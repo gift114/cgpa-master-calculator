@@ -1,14 +1,18 @@
-import "tslib/tslib.es6.mjs";
-import { initializeApp } from "firebase/app";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
 import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   onAuthStateChanged,
   signOut,
-} from "firebase/auth";
-import { getDatabase, ref, set, get, child } from "firebase/database";
-import { getFirestore, doc, setDoc, getDoc } from "firebase/firestore";
+} from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+import {
+  getFirestore,
+  doc,
+  setDoc,
+  getDoc,
+} from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import { getDatabase } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyA-ZfLVt-mMYlewskoMF0xVdp7ODXykBMs",
@@ -50,7 +54,6 @@ function signUpUser() {
       });
     })
     .then(() => {
-      alert("Account created successfully!");
       window.location.href = "index.html";
     })
     .catch((error) => {
@@ -83,7 +86,13 @@ function loginUser() {
       window.location.href = "homePage.html";
     })
     .catch((error) => {
-      showMessage("❌ Login failed: " + error.message, "error");
+      let errorMessage = "❌ Login failed!";
+      if (error.code === "auth/user-not-found") {
+        errorMessage = "User not found. Please check your credentials.";
+      } else if (error.code === "auth/wrong-password") {
+        errorMessage = "Incorrect password. Try again.";
+      }
+      showMessage(errorMessage, "error");
       console.error("Login Error:", error);
     });
 }
@@ -190,30 +199,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-//   const welcomeMessage = document.getElementById("welcome-message");
-//   const user = auth.currentUser;
-
-//   if (!user) {
-//     welcomeMessage.textContent = "Welcome!";
-//     return;
-//   }
-
-//   try {
-//     const userDocRef = doc(firestore, "users", user.uid);
-//     const userDocSnap = await getDoc(userDocRef);
-
-//     if (userDocSnap.exists()) {
-//       const userData = userDocSnap.data();
-//       const name = userData.name || "User";
-//       welcomeMessage.textContent = `Welcome, ${name}!`;
-//     } else {
-//       welcomeMessage.textContent = "Welcome!";
-//     }
-//   } catch (error) {
-//     console.error("Error loading user name:", error);
-//     welcomeMessage.textContent = "Welcome!";
-//   }
-// });
 
 function deleteRow(button) {
   const row = button.closest("tr");
